@@ -1,0 +1,34 @@
+<% include C:\yelpcampapp\views\partials\header.ejs %>
+	
+	<div class="topnav">
+  <a class="active topnavhead" href="/campgrounds">Yelp Camps</a>
+  <!-- <a href="#news">News</a>
+  <a href="#contact">Contact</a> -->
+  <div class="topnav-right">
+    <a href="/login">Login</a>
+    <a href="/signup">Signup</a>
+  </div>
+</div>
+
+<div class="container">
+	<header class="jumbotron">
+		
+		<h1 class="center-head"><%= campgrounds.name%></h1>	
+	</header>
+	<p>
+		<img  src="<%= campgrounds.image%>">
+	</p>
+	<h3>
+		<%= campgrounds.description%>
+	</h3>
+		
+	<a href="/campgrounds/<%= campgrounds._id%>/comments/new">
+   
+<button class="btn btn-primary"> ADD COMMENT </button>
+  </a>
+  <a href="/campgrounds/<%= campgrounds._id%>/edit">
+<button class="greenback btn">EDIT CAMPGROUND DETAILS</button>
+    
+  </a>
+</div>
+<%include C:\yelpcampapp\views\partials\footer.ejs%>

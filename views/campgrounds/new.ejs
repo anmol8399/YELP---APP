@@ -1,0 +1,26 @@
+<% include C:\yelpcampapp\views\partials\header.ejs %>
+	
+	<div class="topnav">
+  <a class="topnavhead" href="/campgrounds">Yelp Camps</a>
+  <!-- <a href="#news">News</a>
+  <a href="#contact">Contact</a> -->
+  <div class="topnav-right">
+    <a  href="/login">Login</a>
+    <a href="/signup">Signup</a>
+  </div>
+</div>
+<div class="container">
+	<header class="jumbotron">
+		
+	<h1>Post a Campground</h1>
+</header>
+<form action="/campgrounds" method="POST">
+	<input type="text" name= "namee" placeholder="Name">
+	<input type="text" name="image" placeholder="Image URL">
+	<input type="text" name="description" placeholder="Description">
+	<button>Submit</button>
+</form><br><br>
+<p>Have changed your mind!! Click here to go back.<br><form action="/campgrounds">
+	<button class="btn btn-primary"> Go back</button></form> </p>
+</div>
+<%include C:\yelpcampapp\views\partials\footer.ejs%>

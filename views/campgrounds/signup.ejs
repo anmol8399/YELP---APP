@@ -1,0 +1,29 @@
+<% include C:\yelpcampapp\views\partials\header.ejs %>
+	
+	<div class="topnav">
+  <a class="topnavhead" href="/campgrounds">Yelp Camps</a>
+  <!-- <a href="#news">News</a>
+  <a href="#contact">Contact</a> -->
+  <div class="topnav-right">
+    <a  href="/login">Login</a>
+    <a class = "active" href="/signup">Signup</a>
+  </div>
+</div>
+<div class="container">
+	<header class="jumbotron">
+		
+		<h1>Welcome to the Signup Page</h1>	
+	</header>
+	<div class="row">
+    <div style="width: 30%; margin: 0 auto;">
+<form action="/signup" method="POST">
+  <p>Name: <input class="form-control" type="text" name="namee" placeholder="Name" required></p><br>
+	<p>Email Id: <input class="form-control" type="email" name="email" placeholder="Email Id" required></p><br>
+	<p>Password: <input class="form-control" type="password" name="pass" placeholder="Password" required></p><br>
+	<button class="btn btn-primary form-control padding ">Signup</button>
+</form>
+</div></div>
+</div>
+
+
+<% include C:\yelpcampapp\views\partials\footer.ejs %>

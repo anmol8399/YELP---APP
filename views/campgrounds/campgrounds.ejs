@@ -1,0 +1,80 @@
+<% include C:\yelpcampapp\views\partials\header.ejs %>
+	<!-- <nav class="navbar navbar-expand-lg">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a href="/" class = "navbar-brand">YelpCamp</a>
+			</div>
+			<div class="collapse ">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a class = "nav-link" href="/"> Login </a></li>
+					<li><a href="/"> Sign Up</a></li>
+					<li><a href="/"> Logout</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav> -->
+	<!-- <nav class="navbar navbar-expand-lg ">
+  <a class=" navbar-brand" href="#">YelpCamp</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class=" navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav navbar-right">
+    	<div class="topnav-right">
+    		<li class="nav-item active topnav-right">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>		
+    	</div>
+      
+      <li class="nav-item navbar-right">
+        <a class="nav-link" href="#">Features</a>
+      </li>
+      <li class="nav-item navbar-right">
+        <a class="nav-link" href="#">Pricing</a>
+      </li>
+      
+    </ul>
+  </div>
+</nav> -->
+<div class="topnav">
+  <a class="active topnavhead" href="/campgrounds">Yelp Camps</a>
+  <!-- <a href="#news">News</a>
+  <a href="#contact">Contact</a> -->
+  <div class="topnav-right">
+    <a href="/login">Login</a>
+    <a href="/signup">Signup</a>
+  </div>
+</div>
+
+<div class="container">
+	<header class="jumbotron">
+		
+		<h1>Welcome to the Campground's Page</h1>	
+	</header>
+		<div class = "row" style="display: flex;flex-wrap: wrap;">
+		
+	<% campgrounds.forEach(function(campground){  %>
+	
+		<div  class = "col-md-5 text-center">
+			<div class = "thumbnail ">
+							<a href="/campgrounds/<%= campground._id%>"><img src = "<%= campground.image%>"></a>
+			</div>
+			<div class="caption "> 
+				<a href="/campgrounds/<%= campground._id%>"><%= campground.name %></a>
+					
+				</div>
+				<div>
+					<%= campground.description%>
+				</div>
+			<!-- -->
+
+		</div>	
+	<% }); %>
+</div>
+	<h6>Didn't find your place? Don't worry !! We're here to help you</h6>
+	<form action="/campgrounds/new">
+		<button class="btn btn-primary">ADD NEW CAMPGROUND</button>
+	</form>
+</div>
+	
+<% include C:\yelpcampapp\views\partials\footer.ejs %>
